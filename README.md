@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+# Setting Up the React.js App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The first thing to do is to go to the terminal of your choise (my one is **Hyper**), and type in `npx create-react-app whatsapp-mern` to create a **React.js** application
 
-## Available Scripts
+Then go to Firebase then go to **Console** and choose **Add project**, then name the project **(whatsapp-mern)** and click **Continue**, then **disable** google analytics and click ** Create project**.
 
-In the project directory, you can run:
+Once you get the **Your new project is ready** message just click **Continue**.
 
-### `npm start`
+Then click on **Web** and type in **whatsapp-mern** in the **Register app App nickname** section, also select **Also set up Firebase Hosting for this app** and click **Register app**.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Then After **Add Firebase SDK** has been generated just click **Next**, then in the **Install Firebase CLI** (`npm install -g firebase-tools`) section copy the command line tool and paste and execute it in the terminal, then click **Next**, then in the **Deploy to Firebase Hosting** section just click in **Continue to the console**.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Then go ahead and move the project folder (whatsapp-mern) in the terminal and open the project, then clean up the project by deleting the **App.test.js**, **logo.svg**, and **setupTests.js** files.
 
-### `npm test`
+Then go to the **App.js** file and delete the code below.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```js
+import logo from './logo.svg';
 
-### `npm run build`
+<header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+And only leave and add the below:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```js
+import React from "react";
+import './App.css';
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+function App() {
+  return (
+    <div className="app">
+      <h1>Let's build a MERN WhatsApp Clone</h1>
+    </div>
+  );
+}
 
-### `npm run eject`
+export default App;
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Then go to **App.css** and delete all the styling code from there as it no longer applies to the code we have left.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+After that go to **index.css** and add the below **CSS** Code:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```css
+*{
+margin: 0
+}
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Now we need to get the **config** from Firebase by going to **Project settings**, then move to the **Your apps** section and select **Config** then click in **Copy** as we will need it for latter on for when we connect to **authentication**.
+Create a **firebase.js** file inside the **src** project folder then paste the copied **Config** code in there
 
-## Learn More
+***
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The **frontend** will be deployed in **Firebase** and the **backend** will be deployed in **Heroku**.
