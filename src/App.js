@@ -1,10 +1,20 @@
 import React from "react";
 import './App.css';
+import Sidebar from "./Sidebar";
+import Chat from "./Chat";
 
 function App() {
   return (
     <div className="app">
-      <h1>Let's build a MERN WhatsApp Clone</h1>
+      <div className="app__body">
+
+        {/* Sidebar Component */}
+        <Sidebar />
+
+        {/* Chat Component */}
+        <Chat />
+      </div>
+
     </div>
   );
 }

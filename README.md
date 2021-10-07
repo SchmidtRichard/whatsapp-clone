@@ -62,7 +62,19 @@ margin: 0
 ```
 
 Now we need to get the **config** from Firebase by going to **Project settings**, then move to the **Your apps** section and select **Config** then click in **Copy** as we will need it for latter on for when we connect to **authentication**.
-Create a **firebase.js** file inside the **src** project folder then paste the copied **Config** code in there
+Create a **firebase.js** file inside the **src** project folder then paste the copied **Config** code in there.
+
+***
+
+# Material UI Installs
+
+Install [Material UI Core](https://www.npmjs.com/package/@material-ui/core) and [Material UI Icons](https://www.npmjs.com/package/@material-ui/icons)
+
+`npm install @material-ui/core`
+
+`npm install @material-ui/icons`
+
+The icons can be found by clicking [here](https://mui.com/components/material-icons/).
 
 ***
 
