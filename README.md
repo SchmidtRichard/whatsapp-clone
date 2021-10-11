@@ -1,4 +1,6 @@
-# Setting Up the React.js App
+# Frontend
+
+## Setting Up the React.js App
 
 The first thing to do is to go to the terminal of your choise (my one is **Hyper**), and type in `npx create-react-app whatsapp-mern` to create a **React.js** application
 
@@ -79,3 +81,25 @@ The icons can be found by clicking [here](https://mui.com/components/material-ic
 ***
 
 The **frontend** will be deployed in **Firebase** and the **backend** will be deployed in **Heroku**.
+
+***
+
+# Backend
+Start by initialising **Node.js** package by typing in the below command inside the **backend folder**:
+
+`npm init`
+
+Just press `Enter` to the following questions in the terminal: **package name**, **version**, **description**, **test command**, **git repository**, **keywords**, **author**, and **license (ISC)**.
+
+For the **entry point: (index.js)** questions type in `server.js`, this is the server side application and **server.js** is a name convention.
+
+Then confirm **yes**
+
+Then go to the file **package.json** inside the **backend folder** and add the below script:
+This will help when deploying the app into **Heroku**.
+
+`"start": "node server.js"
+
+## Backend Dependencies
+
+`npm i express mongoose`
